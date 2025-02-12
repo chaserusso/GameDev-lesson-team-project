@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnl5nl7r2osgt"]
+
+[sub_resource type="Animation" id="Animation_vbusj"]
+resource_name = "between_wave"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_teoyh"]
+_data = {
+"between_wave": SubResource("Animation_vbusj")
+}
+
+[node name="SceneTransitionAnim" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_teoyh")
+}
